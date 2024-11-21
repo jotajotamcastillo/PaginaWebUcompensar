@@ -77,6 +77,14 @@ p {
     }
 }
 
+/* Estilo para las imágenes del carrusel */
+.carousel-img {
+    width: 100%;  /* Asegura que las imágenes ocupen todo el ancho del contenedor */
+    height: 400px;  /* Ajusta la altura máxima de las imágenes */
+    object-fit: cover;  /* Mantiene la proporción de la imagen sin distorsionarla */
+}
+
+
 
 /* Personalización de los enlaces del menú */
 .nav-link {
@@ -386,3 +394,6 @@ footer {
     background-color: #0056b3;
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
 }
+
+
+
