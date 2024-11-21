@@ -44,13 +44,6 @@ section {
     padding-bottom: 20px;
 }
 
-.header-gradient {
-    background: linear-gradient(180deg, #cccccc, #666666); /* Degradado de gris claro a gris oscuro */
-    color: #fff; /* Asegura que el texto sea legible */
-    height: 80px; /* Alineado con el header */
-    border: 1px solid #444; /* Opcional: agrega un borde oscuro para contraste */
-}
-
 
 /* Estilo de los párrafos */
 p {
