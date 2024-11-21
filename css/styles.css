@@ -13,7 +13,7 @@ header {
     padding: 20px 0;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);  /* Sombra para separar */
     border-radius: 10px;  /* Radio de borde más grande */
-    max-width: 80%;  /* Ancho reducido */
+    max-width: 60%;  /* Ancho reducido */
     margin: 20px auto 20px auto;  /* Se agrega margen superior para separar más */
 }
 
@@ -50,17 +50,81 @@ p {
     color: #555;
 }
 
-/* Estilo del carrusel para reducir su altura */
-#carouselExampleIndicators .carousel-inner {
-    max-height: 400px;  /* Ajusta la altura máxima del carrusel */
-    overflow: hidden;    /* Oculta cualquier parte de la imagen que se desborde */
+/* Estilo para las imágenes del carrusel */
+.carousel-img {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    height: calc(70vh); /* Altura relativa al viewport */
+    object-fit: cover; /* Ajusta la imagen para llenar el contenedor */
+    transition: transform 0.3s ease-in-out; /* Suaviza el cambio de tamaño */
 }
 
-#carouselExampleIndicators .carousel-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;  /* Ajusta la imagen para que cubra el área del carrusel sin distorsionarse */
+/* Escala dinámica al hacer zoom */
+.carousel-img:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el ratón */
 }
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .carousel-img {
+        height: calc(50vh); /* Reduce la altura en pantallas pequeñas */
+    }
+}
+
+@media (min-width: 1200px) {
+    .carousel-img {
+        height: calc(80vh); /* Aumenta la altura en pantallas grandes */
+    }
+}
+
+
+/* Personalización de los enlaces del menú */
+.nav-link {
+    font-size: 1.1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-link:hover {
+    color: rgba(0, 0, 0, 0.7); /* Oscurece ligeramente el texto */
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+}
+
+/* Logo redondeado */
+.navbar-brand img {
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand img:hover {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño del logo al pasar el mouse */
+}
+
+/* Eliminar el fondo del menú */
+.navbar {
+    background-color: transparent !important; /* Elimina el fondo */
+    box-shadow: none; /* Elimina cualquier sombra que pueda tener el navbar */
+}
+
+/* Personalización de los enlaces del menú */
+.nav-link {
+    font-size: 1.1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-link:hover {
+    color: rgba(0, 0, 0, 0.7); /* Oscurece ligeramente el texto */
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+}
+
+/* Logo redondeado */
+.navbar-brand img {
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand img:hover {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño del logo al pasar el mouse */
+}
+
+
+
 
 /* Botones */
 .btn-primary {
@@ -92,17 +156,6 @@ form .form-control:focus {
     box-shadow: 0 0 5px rgba(41, 128, 185, 0.5);
 }
 
-/* Pie de página */
-footer {
-    background-color: #2980b9;
-    color: #fff;
-    font-size: 1rem;
-    padding: 20px 0;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);  /* Sombra para separar del contenido */
-    border-top: 2px solid #fff; /* Borde superior blanco para separación */
-    max-width: 80%;  /* Ancho reducido */
-    margin: 0 auto 50px auto;  /* Centra el pie de página y aumenta separación */
-}
 
 /* Estilo para la navbar-brand (logotipo de la página) */
 .navbar-brand {
@@ -131,4 +184,204 @@ footer {
 section {
     border-bottom: 1px solid #ddd; /* Línea de separación sutil */
     margin-bottom: 40px;
+}
+
+
+/* Estilo general para las tarjetas */
+.card {
+    font-family: 'Arial', sans-serif; /* Cambia la fuente general */
+    border-radius: 10px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Efecto al pasar el ratón */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagen circular en la parte superior */
+.card-img-top {
+    width: 200px;
+    height: 200px;
+    object-fit: cover; /* Ajusta la imagen dentro del espacio */
+    border: 3px solid white;
+    margin-top: -25px;
+}
+
+/* Títulos de las tarjetas */
+.card-title {
+    font-family: 'Georgia', serif; /* Cambia el tipo de fuente solo para los títulos */
+    font-size: 1.5rem; /* Aumenta el tamaño del título */
+    font-weight: bold; /* Negrita */
+    font-style: italic; /* Cursiva */
+    margin-bottom: 15px;
+}
+
+/* Texto dentro de las listas */
+.card-body ul {
+    font-family: 'Verdana', sans-serif; /* Fuente específica para el contenido de las listas */
+    font-size: 1rem; /* Tamaño del texto en las listas */
+    line-height: 1.6; /* Espaciado entre líneas */
+    color: #f8f9fa; /* Color blanco suave */
+}
+
+/* Elementos destacados (negrita en listas) */
+.card-body ul li strong {
+    color: #19191c; /* Color dorado para los textos destacados */
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .card-title {
+        font-size: 1.2rem; /* Reduce el tamaño del título en pantallas pequeñas */
+    }
+
+    .card-body ul {
+        font-size: 0.9rem; /* Reduce el tamaño del texto en pantallas pequeñas */
+    }
+}
+
+
+
+/* Estilo general para las tarjetas */
+.card {
+    border-radius: 10px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Efectos al pasar el ratón */
+}
+
+/* Efecto al pasar el ratón */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Colores personalizados para cada tarjeta */
+.card.bg-primary {
+    background-color: #007bff !important;
+}
+
+.card.bg-success {
+    background-color: #28a745 !important;
+}
+
+.card.bg-danger {
+    background-color: #dc3545 !important;
+}
+
+.card.bg-warning {
+    background-color: #ffc107 !important;
+}
+
+.card.bg-info {
+    background-color: #17a2b8 !important;
+}
+
+/* Ajustes de texto para asegurar contraste */
+.card.text-white ul,
+.card.text-white h5 {
+    color: #ffffff;
+}
+
+
+/* Sección de contacto */
+#contact {
+    background-color: #f4f4f9;
+    border-radius: 15px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#contact h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: #2d87f0;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+#contact-form .form-control {
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: all 0.3s ease;
+}
+
+#contact-form .form-control:focus {
+    border-color: #2d87f0;
+    box-shadow: 0 0 5px rgba(45, 135, 240, 0.5);
+}
+
+#contact-form .form-label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Botón de enviar */
+#contact-form .btn-primary {
+    background-color: #2d87f0;
+    border-color: #2d87f0;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+#contact-form .btn-primary:hover {
+    background-color: #1a5bb8;
+    border-color: #1a5bb8;
+}
+
+/* Sombra y bordes en el formulario */
+#contact-form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo de las opciones cuando se seleccionan */
+#contact-form .form-control:focus,
+#contact-form .form-control:active {
+    outline: none;
+}
+
+/* Estilo de la imagen del contacto en móviles */
+@media (max-width: 768px) {
+    #contact-form {
+        margin-top: 20px;
+    }
+}
+
+
+/* Pie de página */
+footer {
+    background-color: #2980b9;
+    color: #fff;
+    font-size: 1rem;
+    padding: 20px 0;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);  /* Sombra para separar del contenido */
+    border-top: 2px solid #fff; /* Borde superior blanco para separación */
+    max-width: 80%;  /* Ancho reducido */
+    margin: 0 auto 50px auto;  /* Centra el pie de página y aumenta separación */
+}
+
+
+/* Estilo para el botón flotante */
+.btn-floating {
+    background-color: #007bff;
+    color: white;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 18px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto al pasar el ratón sobre el botón */
+.btn-floating:hover {
+    background-color: #0056b3;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
 }
