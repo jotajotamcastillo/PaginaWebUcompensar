@@ -1,0 +1,134 @@
+/* Estilos globales */ 
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Separación visual entre header y nav */
+header {
+    background-color: #ffffff;
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);  /* Sombra para separar */
+    border-radius: 10px;  /* Radio de borde más grande */
+    max-width: 80%;  /* Ancho reducido */
+    margin: 20px auto 20px auto;  /* Se agrega margen superior para separar más */
+}
+
+/* Navbar (Menú) */
+nav {
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);  /* Sombra para separar */
+    margin-bottom: 30px; /* Espacio debajo del navbar */
+}
+
+/* Separación de secciones */
+section {
+    padding: 40px 0;
+    margin-bottom: 50px; /* Aumentar la separación entre las secciones */
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: #ffffff; /* Fondo blanco para destacar el contenido */
+    max-width: 80%; /* Ancho reducido */
+    margin: 0 auto; /* Centra las secciones */
+}
+
+/* Sección Acerca de Nosotros */
+#about, #contact {
+    font-family: 'Verdana', sans-serif;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+/* Estilo de los párrafos */
+p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Estilo del carrusel para reducir su altura */
+#carouselExampleIndicators .carousel-inner {
+    max-height: 400px;  /* Ajusta la altura máxima del carrusel */
+    overflow: hidden;    /* Oculta cualquier parte de la imagen que se desborde */
+}
+
+#carouselExampleIndicators .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* Ajusta la imagen para que cubra el área del carrusel sin distorsionarse */
+}
+
+/* Botones */
+.btn-primary {
+    background-color: #2980b9;
+    border-color: #2980b9;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.btn-primary:hover {
+    background-color: #1d6f91;
+    border-color: #1d6f91;
+}
+
+/* Estilos para el formulario */
+form .form-label {
+    font-weight: bold;
+    color: #333;
+}
+
+form .form-control {
+    border-radius: 5px;
+    border-color: #ccc;
+    box-shadow: none;
+}
+
+form .form-control:focus {
+    border-color: #2980b9;
+    box-shadow: 0 0 5px rgba(41, 128, 185, 0.5);
+}
+
+/* Pie de página */
+footer {
+    background-color: #2980b9;
+    color: #fff;
+    font-size: 1rem;
+    padding: 20px 0;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);  /* Sombra para separar del contenido */
+    border-top: 2px solid #fff; /* Borde superior blanco para separación */
+    max-width: 80%;  /* Ancho reducido */
+    margin: 0 auto 50px auto;  /* Centra el pie de página y aumenta separación */
+}
+
+/* Estilo para la navbar-brand (logotipo de la página) */
+.navbar-brand {
+    font-family: 'Roboto', sans-serif;  /* Establece la fuente a Roboto */
+    font-weight: 500;                   /* Ajusta el peso de la fuente */
+    font-size: 1.8rem;                  /* Tamaño de fuente más grande */
+    color: #333;                        /* Color del texto */
+}
+
+/* Cambiar el color de la navbar-brand cuando se pasa el cursor */
+.navbar-brand:hover {
+    color: #2980b9;  /* Color cuando se pasa el ratón */
+}
+
+/* Espaciado extra entre los enlaces del navbar */
+.navbar-nav .nav-item {
+    margin-left: 20px;
+}
+
+/* Separación visual entre el contenido del header y las demás secciones */
+.container {
+    margin-top: 20px;
+}
+
+/* Agregar un borde inferior en las secciones */
+section {
+    border-bottom: 1px solid #ddd; /* Línea de separación sutil */
+    margin-bottom: 40px;
+}
